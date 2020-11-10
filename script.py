@@ -38,3 +38,23 @@ if __name__ == "__main__":
 	resultado = summarize_contents(filename)
 	print (resultado) 	
 summarize_contents(filename)
+
+#Secuencia ingresada por el usuario
+	entrada1  =  input ( "Ingresar la primera secuencia de ADN:" )
+	entrada2  =  input ( "Ingresar la segunda secuencia de ADN:" )
+
+	Secuencia1  = ( entrada1 )
+	Secuencia2  = ( entrada2 )
+
+# Función definida
+#Se determina la función ya que la secuencia es insertada
+
+def  concatenate_and_get_reverse_of_complement ( Secuencia1 , Secuencia2 ):
+	concatenate  =  Sequence1  +  Sequence2  #serie de cadenas
+	invers  =  concatenar . complemento_inverso ())
+	return ( concatenar . reverse_complement ())
+
+if  __name__  ==  "__main__" :
+	ressequence2  =  concatenate_and_get_reverse_of_complement ( Secuencia1 , Secuencia2 )
+	imprimir ( ressequence2 )
+== == == =
