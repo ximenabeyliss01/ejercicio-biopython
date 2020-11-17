@@ -58,3 +58,44 @@ if  __name__  ==  "__main__" :
 	ressequence2  =  concatenate_and_get_reverse_of_complement ( Secuencia1 , Secuencia2 )
 	imprimir ( ressequence2 )
 == == == =
+secuencia  =  'AGCTATACGACTCAG'
+def  print_protein_and_stop_codon_using_standard_table ( secuencia ):
+	prueba :
+		cadena  =  Seq ( secuencia )
+	excepto :
+		return ( "Cadena no correspondiente a secuencia de nucelótidos" )
+	Diccionario  = {}
+	SecuenciaRNA  =  cadena . transcribir ()
+	Diccionario [ 'RNAm:' ] =  SecuenciaRNA
+	Diccionario [ 'Protein:' ] = []
+	cinicio  =  Falso
+	para el  codón  en el  rango ( 0 , len ( secuencia ), 3 ):
+		si  "GCT"  o  "ATG"  o  "TTG"  en  secuencia [ codón : codón + 3 ]:
+			stcodon  =  codón
+			DNAcodon  =  Seq ( secuencia [ codon : len ( cadena )])
+
+			Diccionario [ 'Proteina:' ]. añadir ( codDNA . traducir ( tabla  =  1 ))
+			cinicio  =  Verdadero
+			romper
+
+	si  cinicio  ==  Falso :
+		raise  TypeError ( "No se presentan tripletes y / o codones de inicio en la secuencia" )
+
+	Diccionario [ 'Stop Codon' ] = []
+	si  cinicio  ==  Verdadero :
+		para el  codón  en el  rango ( 0 , len ( secuencia ), 3 ):
+			si ( 'AAT'  en  secuencia [ codon : codon + 3 ]) y ( stcodon  <  codon ):
+				Diccionario [ 'codón de parada' ]. añadir ( 'AAT' )
+				romper
+			si ( 'GCT'  en  secuencia [ codon : codon + 3 ]) y ( stcodon  <  codon ):
+				Diccionario [ 'codón de parada' ]. añadir ( 'GCT' )
+				romper
+			if ( 'CTA'  en  secuencia [ codon : codon + 3 ]) y ( stcodon  <  codon ):
+				Diccionario [ 'codón de parada' ]. añadir ( 'CTA' )
+				romper
+
+	volver  Diccionario
+
+if  __name__  ==  "__main__" :
+	resultado  =  print_protein_and_stop_codon_using_standard_table ( secuencia )
+	imprimir ( resultado )
