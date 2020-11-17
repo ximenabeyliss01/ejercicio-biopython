@@ -20,3 +20,28 @@ class MiPrueba(unittest.TestCase):
 
         s = script.summarize_contents(os.path.abspath("data/opuntia.fasta"))
         self.assertDictEqual({'File:': 'opuntia.fasta', 'Path:': '/mnt/c/Users/Usuario/Desktop/ejercicio-biopython-main/data', 'Num_Records:': 7, 'Names:': ['gi|6273291|gb|AF191665.1|AF191665', 'gi|6273290|gb|AF191664.1|AF191664', 'gi|6273289|gb|AF191663.1|AF191663', 'gi|6273287|gb|AF191661.1|AF191661', 'gi|6273286|gb|AF191660.1|AF191660', 'gi|6273285|gb|AF191659.1|AF191659', 'gi|6273284|gb|AF191658.1|AF191658'], 'IDs:': ['gi|6273291|gb|AF191665.1|AF191665', 'gi|6273290|gb|AF191664.1|AF191664', 'gi|6273289|gb|AF191663.1|AF191663', 'gi|6273287|gb|AF191661.1|AF191661', 'gi|6273286|gb|AF191660.1|AF191660', 'gi|6273285|gb|AF191659.1|AF191659', 'gi|6273284|gb|AF191658.1|AF191658'], 'Descriptions: ': ['gi|6273291|gb|AF191665.1|AF191665 Opuntia marenae rpl16 gene; chloroplast gene for chloroplast product, partial intron sequence', 'gi|6273290|gb|AF191664.1|AF191664 Opuntia clavata rpl16 gene; chloroplast gene for chloroplast product, partial intron sequence', 'gi|6273289|gb|AF191663.1|AF191663 Opuntia bradtiana rpl16 gene; chloroplast gene for chloroplast product, partial intron sequence', 'gi|6273287|gb|AF191661.1|AF191661 Opuntia kuehnrichiana rpl16 gene; chloroplast gene for chloroplast product, partial intron sequence', 'gi|6273286|gb|AF191660.1|AF191660 Opuntia echinacea rpl16 gene; chloroplast gene for chloroplast product, partial intron sequence', 'gi|6273285|gb|AF191659.1|AF191659 Opuntia pachypus rpl16 gene; chloroplast gene for chloroplast product, partial intron sequence', 'gi|6273284|gb|AF191658.1|AF191658 Opuntia subulata rpl16 gene; chloroplast gene for chloroplast product, partial intron sequence']},s)
+
+        #Ejercicio 2
+si  __name__  ==  "__main__"
+	unittest . principal ()
+	def  test_concatenate_get_reverse_of_complement ( self ):
+
+		secuencia1  =  Cadena ( "GCTAACTATGCCAAT" )
+		creversa  =  concatenate_and_get_reverse_of_complement ( "ATGCGAATGCGATCA" , "TCGACCTAAGTCAGA" )
+		yo . asertEqual ( secuencia1 , creversa )
+
+		secuencia2  =  Cadena ( "GATCAAGCCTGATCA" )
+		creversa  =  concatenate_and_get_reverse_of_complement ( "AGCTACTGCTAGACT" , "TCGACTATCGATACC" )
+		yo . asertEqual ( secuencia2 , creversa )
+
+		secuencia3  =  Cadena ( "ATCGAATCGCTGGAC" )
+		creversa  =  concatenate_and_get_reverse_of_complement ( "GCTTACGAACTGCAT" , "AGGTCCATACGAATC" )
+		yo . asertEqual ( secuencia3 , creversa )
+
+		secuencia4  =  Cadena ( "TGAACGTCGATTACA" )
+		creversa  =  concatenate_and_get_reverse_of_complement ( "AATCGGACTACGTCG" , "CTACGACTAAGCTTA" )
+		yo . asertEqual ( secuencia4 , creversa )
+
+		secuencia5  =  Cadena ( "CGGCTACATACGCCG" )
+		creversa  =  concatenate_and_get_reverse_of_complement ( "CGCATTCGACTAGTC" , "GGGCTACATCATCGA" )
+		yo . asertEqual ( secuencia5 , creversa )
